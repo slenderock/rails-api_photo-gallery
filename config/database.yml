@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  timeout: 5000
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch('GALLERY_DATABASE_USERNAME') { 'postgres' } %>
+  password: <%= ENV.fetch('GALLERY_DATABASE_PASSWORD') { 'password' } %>
+development:
+  <<: *default
+  database: rails-api_photo-gallery_development
+test:
+  <<: *default
+  database: rails-api_photo-gallery_test
+production:
+  <<: *default
+  database: rails-api_photo-gallery_production
