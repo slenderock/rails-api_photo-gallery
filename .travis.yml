@@ -2,9 +2,14 @@ sudo: required
 dist: trusty
 language: ruby
 rvm: 2.4.1
+addons:
+  postgresql: '9.6'
 
 before_script:
-  - gem install rubocop
+  - bundle install
+  - psql -c 'create database photo_gallery_test;' -U postgres
+  - bundle exec rails db:migrate
 
 script:
-  - rubocop
+  - bundle exec rubocop
+  - bundle exec rspec

@@ -7,10 +7,10 @@ default: &default
   password: <%= ENV.fetch('GALLERY_DATABASE_PASSWORD') { 'password' } %>
 development:
   <<: *default
-  database: rails-api_photo-gallery_development
+  database: photo_gallery_development
 test:
   <<: *default
-  database: rails-api_photo-gallery_test
+  database: photo_gallery_test
 production:
   <<: *default
-  database: rails-api_photo-gallery_production
+  database: photo_gallery_production

@@ -1,7 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+[
+  { id: 1, category: 'boats', caption: 'View from a boat', url: 'assets/img/boat_01.jpg' },
+  { id: 2, category: 'boats', caption: 'View from a boat', url: 'assets/img/boat_02.jpg' },
+  { id: 3, category: 'boats', caption: 'View from a boat', url: 'assets/img/boat_03.jpg' },
+  { id: 4, category: 'boats', caption: 'View from a boat', url: 'assets/img/boat_04.jpg' },
+  { id: 5, category: 'camping', caption: 'View from a boat', url: 'assets/img/camping_01.jpg' },
+  { id: 6, category: 'camping', caption: 'View from a camping', url: 'assets/img/camping_02.jpg' },
+  { id: 7, category: 'camping', caption: 'View from a camping', url: 'assets/img/camping_03.jpg' },
+  { id: 8, category: 'library', caption: 'View from a boat', url: 'assets/img/library_01.jpg' },
+  { id: 9, category: 'library', caption: 'View from a library', url: 'assets/img/library_02.jpg' },
+  { id: 10, category: 'library', caption: 'View from a library', url: 'assets/img/library_03.jpg' }
+].each do |photo|
+  Photo.create(photo)
+end
