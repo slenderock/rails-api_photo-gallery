@@ -25,6 +25,11 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 group :development, :test do
+  # Use RSpec for specs
+  gem 'rspec-rails', '>= 3.5.0'
+
+  # Use Factory Girl for generating random test data
+  gem 'factory_girl_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
